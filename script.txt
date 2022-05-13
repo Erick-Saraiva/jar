@@ -1,0 +1,19 @@
+#!/bin/bash
+#Script instalar java, gui etc!
+# Atualizando os pacotes do sistema operacional:
+sudo apt update && sudo apt upgrade –y
+sudo apt install zip -y
+curl -s "https://get.sdkman.io" | bash
+source "/home/ubuntu/.sdkman/bin/sdkman-init.sh"
+sdk install java
+sudo apt install rdesktop
+ENTER
+
+#!/bin/bash
+#Script rodar jar!
+# Clonando o repositorio do jar
+mkdir testeJar
+cd testeJar
+git clone https://github.com/Erick-Saraiva/jar.git
+cd jar
+java –jar LoginHealthInspec-1.0-SNAPSHOT-jar-with-dependencies.jar
